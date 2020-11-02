@@ -1,0 +1,22 @@
+CRIAR UM SERVIDOR
+npm install express
+npm install nodemon e no "scripts"("start": "nodemon src/server.js")
+npm install hbs (template engine)
+
+ter o node
+node init (package.json)
+
+server.js 
+//importar pacote/dependencia
+const express = require('express');
+const path = require('path')
+// iniciando o express
+const server = express()
+
+// exemplo para criar uma rota
+server.get('/'(aqui ficaria o endereço (index.html)), (request, response) => {
+    return response.sendFile(path.join(__dirname, 'views', 'index.html'))
+})
+
+// ligar o servidor
+server.listen(5500)
